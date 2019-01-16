@@ -6,7 +6,7 @@
 #    By: mmonahan <mmonahan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/30 21:09:37 by mmonahan          #+#    #+#              #
-#    Updated: 2019/01/14 20:13:59 by mmonahan         ###   ########.fr        #
+#    Updated: 2019/01/16 20:52:39 by mmonahan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,7 +78,6 @@ SRC = 	ft_memset.c \
 		ft_islower.c \
 		ft_isspace.c \
 		ft_lstlen.c \
-		ft_lstaddend.c \
 		ft_del.c
 
 OBJ = $(SRC:.c=.o)
@@ -88,20 +87,19 @@ HEADER = libft.h
 all: $(NAME)
 
 $(NAME):
-		gcc -Wall -Wextra -Werror -c -I $(HEADER) $(SRC)
-		ar rc $(NAME) $(OBJ)
-		@#runlib $(NAME)
-		#создаем main (убрать перед проверкой)
-		gcc -Wall -Wextra -Werror -o main main.c $(NAME)
+		#компилируем файлы с расширением .о
+		@gcc -Wall -Wextra -Werror -c -I $(HEADER) $(SRC)
+		#собираем библиотеку $(NAME)
+		@ar rc $(NAME) $(OBJ)
+		#посторение оглавления библиотеки
+		@ranlib $(NAME)
 
 clean:
-		rm -f *.o
+		#удаляем файлы компиляции .o
+		@rm -f *.o
 
 fclean: clean
-		rm -f $(NAME)
-		#удаляем main (убрать перед проверкой)
-		rm -f main
-		#удаляем временные файлы (убрать перед проверкой)
-		rm -f *~
+		#удаляем библиотеку $(NAME)
+		@rm -f $(NAME)
 
 re:	fclean all

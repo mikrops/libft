@@ -6,7 +6,7 @@
 /*   By: mmonahan <mmonahan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 20:34:12 by mmonahan          #+#    #+#             */
-/*   Updated: 2019/01/10 20:36:08 by mmonahan         ###   ########.fr       */
+/*   Updated: 2019/01/16 20:16:18 by mmonahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	t_list *list;
+	t_list	*list;
 
 	list = ft_memalloc(sizeof(t_list));
 	if (!list)

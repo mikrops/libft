@@ -6,7 +6,7 @@
 /*   By: mmonahan <mmonahan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/10 23:45:26 by mmonahan          #+#    #+#             */
-/*   Updated: 2019/01/06 20:35:52 by mmonahan         ###   ########.fr       */
+/*   Updated: 2019/01/16 20:17:23 by mmonahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
-	unsigned char *str1;
-	unsigned char *str2;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
 	str1 = (unsigned char*)s1;
 	str2 = (unsigned char*)s2;

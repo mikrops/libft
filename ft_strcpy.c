@@ -6,7 +6,7 @@
 /*   By: mmonahan <mmonahan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 20:41:48 by mmonahan          #+#    #+#             */
-/*   Updated: 2019/01/06 16:45:10 by mmonahan         ###   ########.fr       */
+/*   Updated: 2019/01/16 20:17:28 by mmonahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strcpy(char *dst, const char *src)
 {
-	char *tmp;
+	char	*tmp;
 
 	tmp = dst;
 	while (*src)
