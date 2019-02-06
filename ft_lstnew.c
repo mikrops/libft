@@ -6,7 +6,7 @@
 /*   By: mmonahan <mmonahan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 20:34:12 by mmonahan          #+#    #+#             */
-/*   Updated: 2019/01/16 20:16:18 by mmonahan         ###   ########.fr       */
+/*   Updated: 2019/01/17 15:34:21 by mmonahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	else
 	{
 		list->content_size = 0;
-		free(list);
+		list->content = NULL;
 	}
 	list->next = NULL;
 	return (list);

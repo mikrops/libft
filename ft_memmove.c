@@ -6,7 +6,7 @@
 /*   By: mmonahan <mmonahan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 22:00:03 by mmonahan          #+#    #+#             */
-/*   Updated: 2019/01/05 19:31:19 by mmonahan         ###   ########.fr       */
+/*   Updated: 2019/01/17 17:15:47 by mmonahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	const unsigned char	*tempsrc;
 	size_t				i;
 
+	if (dst == src)
+		return (dst);
 	tempdst = dst;
 	tempsrc = src;
 	i = 0;

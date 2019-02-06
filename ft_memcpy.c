@@ -6,7 +6,7 @@
 /*   By: mmonahan <mmonahan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/02 18:09:02 by mmonahan          #+#    #+#             */
-/*   Updated: 2019/01/05 19:37:30 by mmonahan         ###   ########.fr       */
+/*   Updated: 2019/01/17 17:18:57 by mmonahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	const unsigned char	*tempsrc;
 	size_t				i;
 
+	if (dst == src)
+		return (dst);
 	tempdst = dst;
 	tempsrc = src;
 	i = 0;

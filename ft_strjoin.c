@@ -6,11 +6,33 @@
 /*   By: mmonahan <mmonahan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/18 17:45:54 by mmonahan          #+#    #+#             */
-/*   Updated: 2019/01/14 20:34:24 by mmonahan         ###   ########.fr       */
+/*   Updated: 2019/02/04 19:28:59 by mmonahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**	Description: Allocates (with malloc(3)) and returns a “fresh” string
+**	endin with ’\0’, result of the concatenation of s1 and s2. If the allocation
+**	fails the function returns NULL.
+**
+**	Param. #1: The prefix string.
+**	Param. #2: The suffix string.
+**	Return value: The “fresh” string result of the concatenation of
+**	 the 2 strings.
+**	Libc functions: malloc(3)
+**
+**
+**	Описание: Распределяет (с помощью malloc (3)) и возвращает «свежую» строку,
+**	оканчивающуюся на «0», результат объединения s1 и s2. Если распределение
+**	завершается неудачно, функция возвращает NULL.
+**
+**	Пар. # 1: Строка префикса.
+**	Пар. # 2: Строка суффикса.
+**	Возвращаемое значение: «свежая» строка результата объединения двух строк.
+**	Функции Libc: malloc (3)
+*/
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -23,7 +45,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
-	str = ft_memalloc(sizeof(char) * (s1_len + s1_len) + 1);
+	str = ft_memalloc(sizeof(char) * (s1_len + s2_len) + 1);
 	if (!str)
 		return (NULL);
 	t_str = str;
